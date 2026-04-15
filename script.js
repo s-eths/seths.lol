@@ -16,12 +16,12 @@ const gate = document.getElementById("gate");
 const main = document.getElementById("main");
 const music = document.getElementById("music");
 
-enter.onclick = async () => {
-  gate.style.display = "none";
-
-  main.style.opacity = "1";
-  main.style.transform = "scale(1)";
-
+gate.addEventListener('click', () => {
+  gate.style.display = 'none';
+  
+  main.style.opacity = '1';
+  main.style.transform = 'scale(1)';
+  
   document.getElementById("player").style.display = "flex";
 
   music.src = 'data/Whatever.mp3';
@@ -29,8 +29,8 @@ enter.onclick = async () => {
   music.volume = 0.5;
   music.loop = true;
 
-  music.play().catch(()=>{});
-};
+  music.play().catch(() => {});
+});
 
 const progress = document.getElementById("progress");
 const current = document.getElementById("current");
